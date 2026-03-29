@@ -11,7 +11,7 @@ export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
   @Post()
-  @ApiCreateUserResponse() // Decorator personalizado para manter o código limpo
+  @ApiCreateUserResponse() // Decorator personalizado
   create(@Body() createUserDto: CreateUserDto) {
     return this.usersService.create(createUserDto);
   }
