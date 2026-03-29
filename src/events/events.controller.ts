@@ -11,7 +11,7 @@ export class EventsController {
   constructor(private readonly eventsService: EventsService) {}
 
   @Post()
-  @ApiCreateEventResponse() // O seu decorator personalizado (Requisito 4.1)
+  @ApiCreateEventResponse() // Decorator personalizado (Requisito 4.1)
   create(@Body() createEventDto: CreateEventDto) {
     return this.eventsService.create(createEventDto);
   }
